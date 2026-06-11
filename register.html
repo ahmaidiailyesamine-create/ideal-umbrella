@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join CAFJT — Register</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="register-page">
+
+  <!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+  <nav id="navbar" class="nav-transparent">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" stroke="var(--orange)" stroke-width="2.5"/>
+            <path d="M24 2 Q30 12 30 24 Q30 36 24 46" stroke="var(--orange)" stroke-width="2" fill="none"/>
+            <path d="M24 2 Q18 12 18 24 Q18 36 24 46" stroke="var(--orange)" stroke-width="2" fill="none"/>
+            <line x1="2" y1="24" x2="46" y2="24" stroke="var(--orange)" stroke-width="2"/>
+          </svg>
+        </div>
+        <span class="logo-text">CAFJT</span>
+      </a>
+      <a href="index.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to site
+      </a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════ REGISTER HERO ═══════════════════════════ -->
+  <div class="register-hero">
+    <div class="register-hero-bg" aria-hidden="true">
+      <!-- Animated court lines -->
+      <div class="hero-court">
+        <div class="court-line court-center"></div>
+        <div class="court-circle"></div>
+      </div>
+    </div>
+    <div class="register-hero-content">
+      <span class="hero-eyebrow">New Member Registration</span>
+      <h1 class="register-title">Join the Team</h1>
+      <p>Fill in the form below. We'll review your application and reach out within 48 hours.</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ FORM ═══════════════════════════ -->
+  <main class="register-main">
+    <div class="register-container">
+
+      <!-- Progress indicator -->
+      <div class="form-progress" id="formProgress" aria-label="Form completion progress">
+        <div class="progress-bar" id="progressBar"></div>
+        <span class="progress-label" id="progressLabel">0% complete</span>
+      </div>
+
+      <form class="register-form glass-card" id="registerForm" novalidate>
+
+        <!-- ── Section 1: Personal Info ── -->
+        <fieldset class="form-section">
+          <legend>
+            <span class="section-icon"><i class="fas fa-user"></i></span>
+            Personal Information
+          </legend>
+
+          <div class="form-row">
+            <div class="form-group" id="fg-fullName">
+              <label for="fullName">Full Name <span class="required" aria-hidden="true">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-user input-icon" aria-hidden="true"></i>
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="e.g. Mohamed Benali"
+                  autocomplete="name"
+                  required
+                  aria-required="true"
+                  aria-describedby="fullName-error"
+                />
+              </div>
+              <span class="field-error" id="fullName-error" role="alert"></span>
+            </div>
+
+            <div class="form-group" id="fg-dob">
+              <label for="dob">Date of Birth <span class="required" aria-hidden="true">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-calendar input-icon" aria-hidden="true"></i>
+                <input
+                  type="date"
+                  id="dob"
+                  name="dob"
+                  required
+                  aria-required="true"
+                  aria-describedby="dob-error"
+                />
+              </div>
+              <span class="field-error" id="dob-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" id="fg-email">
+              <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-envelope input-icon" aria-hidden="true"></i>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                  aria-required="true"
+                  aria-describedby="email-error"
+                />
+              </div>
+              <span class="field-error" id="email-error" role="alert"></span>
+            </div>
+
+            <div class="form-group" id="fg-phone">
+              <label for="phone">Phone Number <span class="required" aria-hidden="true">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-phone input-icon" aria-hidden="true"></i>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+213 5XX XXX XXX"
+                  autocomplete="tel"
+                  required
+                  aria-required="true"
+                  aria-describedby="phone-error"
+                />
+              </div>
+              <span class="field-error" id="phone-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-group form-group-full" id="fg-address">
+            <label for="address">Address <span class="required" aria-hidden="true">*</span></label>
+            <div class="input-wrapper">
+              <i class="fas fa-map-marker-alt input-icon" aria-hidden="true"></i>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Street, District, Wilaya"
+                autocomplete="street-address"
+                required
+                aria-required="true"
+                aria-describedby="address-error"
+              />
+            </div>
+            <span class="field-error" id="address-error" role="alert"></span>
+          </div>
+        </fieldset>
+
+        <!-- ── Section 2: Team Selection ── -->
+        <fieldset class="form-section">
+          <legend>
+            <span class="section-icon"><i class="fas fa-basketball-ball"></i></span>
+            Team &amp; Experience
+          </legend>
+
+          <div class="form-row">
+            <div class="form-group" id="fg-team">
+              <label for="team">Preferred Team <span class="required" aria-hidden="true">*</span></label>
+              <div class="input-wrapper select-wrapper">
+                <i class="fas fa-layer-group input-icon" aria-hidden="true"></i>
+                <select
+                  id="team"
+                  name="team"
+                  required
+                  aria-required="true"
+                  aria-describedby="team-error"
+                >
+                  <option value="" disabled selected>Select a team…</option>
+                  <option value="junior">Junior Team (U18)</option>
+                  <option value="senior">Senior Team</option>
+                  <option value="womens">Women's Team</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+                <i class="fas fa-chevron-down select-arrow" aria-hidden="true"></i>
+              </div>
+              <span class="field-error" id="team-error" role="alert"></span>
+            </div>
+
+            <div class="form-group" id="fg-experience">
+              <label for="experience">Playing Experience</label>
+              <div class="input-wrapper select-wrapper">
+                <i class="fas fa-star input-icon" aria-hidden="true"></i>
+                <select id="experience" name="experience">
+                  <option value="" disabled selected>Select level…</option>
+                  <option value="beginner">Beginner (0–1 years)</option>
+                  <option value="intermediate">Intermediate (2–4 years)</option>
+                  <option value="advanced">Advanced (5+ years)</option>
+                  <option value="competitive">Competitive / League</option>
+                </select>
+                <i class="fas fa-chevron-down select-arrow" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Position checkboxes -->
+          <div class="form-group form-group-full">
+            <label>Preferred Position(s)</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item">
+                <input type="checkbox" name="position" value="pg" />
+                <span class="checkbox-custom"></span>
+                Point Guard
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="position" value="sg" />
+                <span class="checkbox-custom"></span>
+                Shooting Guard
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="position" value="sf" />
+                <span class="checkbox-custom"></span>
+                Small Forward
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="position" value="pf" />
+                <span class="checkbox-custom"></span>
+                Power Forward
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="position" value="c" />
+                <span class="checkbox-custom"></span>
+                Center
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ── Section 3: Emergency Contact ── -->
+        <fieldset class="form-section">
+          <legend>
+            <span class="section-icon"><i class="fas fa-heart-pulse"></i></span>
+            Emergency Contact
+          </legend>
+
+          <div class="form-row">
+            <div class="form-group" id="fg-emergencyName">
+              <label for="emergencyName">Contact Name <span class="required" aria-hidden="true">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-user-shield input-icon" aria-hidden="true"></i>
+                <input
+                  type="text"
+                  id="emergencyName"
+                  name="emergencyName"
+                  placeholder="e.g. Fatima Benali (Mother)"
+                  required
+                  aria-required="true"
+                  aria-describedby="emergencyName-error"
+                />
+              </div>
+              <span class="field-error" id="emergencyName-error" role="alert"></span>
+            </div>
+
+            <div class="form-group" id="fg-emergencyPhone">
+              <label for="emergencyPhone">Contact Phone <span class="required" aria-hidden="true">*</span></label>
+              <div class="input-wrapper">
+                <i class="fas fa-phone-volume input-icon" aria-hidden="true"></i>
+                <input
+                  type="tel"
+                  id="emergencyPhone"
+                  name="emergencyPhone"
+                  placeholder="+213 5XX XXX XXX"
+                  required
+                  aria-required="true"
+                  aria-describedby="emergencyPhone-error"
+                />
+              </div>
+              <span class="field-error" id="emergencyPhone-error" role="alert"></span>
+            </div>
+          </div>
+
+          <div class="form-group form-group-full" id="fg-medicalNotes">
+            <label for="medicalNotes">Medical Notes <span class="optional">(optional)</span></label>
+            <div class="input-wrapper textarea-wrapper">
+              <i class="fas fa-notes-medical input-icon" aria-hidden="true"></i>
+              <textarea
+                id="medicalNotes"
+                name="medicalNotes"
+                rows="3"
+                placeholder="Any allergies, conditions, or medication the coaching staff should know about…"
+              ></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- ── Consent ── -->
+        <div class="form-section form-section-consent">
+          <label class="checkbox-item checkbox-consent" id="fg-consent">
+            <input type="checkbox" id="consent" name="consent" required aria-required="true" aria-describedby="consent-error"/>
+            <span class="checkbox-custom"></span>
+            <span>
+              I confirm that all information is accurate and I agree to the
+              <a href="#" class="inline-link">Club Rules</a> and
+              <a href="#" class="inline-link">Code of Conduct</a>. <span class="required" aria-hidden="true">*</span>
+            </span>
+          </label>
+          <span class="field-error" id="consent-error" role="alert"></span>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+            <span class="btn-text">Submit Application</span>
+            <span class="btn-loader" hidden>
+              <i class="fas fa-circle-notch fa-spin"></i>
+            </span>
+          </button>
+        </div>
+
+      </form>
+
+      <!-- ═══ Success State ═══ -->
+      <div class="register-success glass-card" id="registerSuccess" hidden>
+        <div class="success-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>Application Received!</h2>
+        <p>
+          Thanks for joining CAFJT Basketball Club. We've received your application
+          and will be in touch within <strong>48 hours</strong> to confirm your place.
+        </p>
+        <div class="success-info">
+          <div class="success-info-item">
+            <i class="fas fa-envelope"></i>
+            <span>Check your inbox for a confirmation email.</span>
+          </div>
+          <div class="success-info-item">
+            <i class="fas fa-calendar-check"></i>
+            <span>Your first training session will be arranged for you.</span>
+          </div>
+        </div>
+        <a href="index.html" class="btn btn-primary" style="margin-top:2rem;">
+          <i class="fas fa-home"></i> Back to Homepage
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer register-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span id="footerYear"></span> CAFJT Basketball Club. All rights reserved.</p>
+        <p><a href="index.html">Back to main site</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAFJT Basketball Club</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts: Bebas Neue (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ NAVIGATION ═══════════════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="24" cy="24" r="22" stroke="var(--orange)" stroke-width="2.5"/>
+            <path d="M24 2 Q30 12 30 24 Q30 36 24 46" stroke="var(--orange)" stroke-width="2" fill="none"/>
+            <path d="M24 2 Q18 12 18 24 Q18 36 24 46" stroke="var(--orange)" stroke-width="2" fill="none"/>
+            <line x1="2" y1="24" x2="46" y2="24" stroke="var(--orange)" stroke-width="2"/>
+          </svg>
+        </div>
+        <span class="logo-text">CAFJT</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#schedule" class="nav-link">Training</a></li>
+        <li><a href="#teams" class="nav-link">Teams</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="register.html" class="nav-cta">Join Now</a></li>
+      </ul>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section id="home" class="hero">
+    <!-- Animated court lines background -->
+    <div class="hero-court" aria-hidden="true">
+      <div class="court-line court-center"></div>
+      <div class="court-line court-arc court-arc-left"></div>
+      <div class="court-line court-arc court-arc-right"></div>
+      <div class="court-circle"></div>
+    </div>
+
+    <!-- Floating basketballs decoration -->
+    <div class="ball-decor ball-1" aria-hidden="true">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="38" fill="var(--orange)" opacity=".15" stroke="var(--orange)" stroke-width="1.5" opacity=".3"/>
+        <path d="M40 2 Q50 20 50 40 Q50 60 40 78" stroke="var(--orange)" stroke-width="1.5" fill="none" opacity=".4"/>
+        <path d="M40 2 Q30 20 30 40 Q30 60 40 78" stroke="var(--orange)" stroke-width="1.5" fill="none" opacity=".4"/>
+        <line x1="2" y1="40" x2="78" y2="40" stroke="var(--orange)" stroke-width="1.5" opacity=".4"/>
+      </svg>
+    </div>
+    <div class="ball-decor ball-2" aria-hidden="true">
+      <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="28" fill="var(--orange)" opacity=".1" stroke="var(--orange)" stroke-width="1.5" opacity=".25"/>
+        <path d="M30 2 Q38 15 38 30 Q38 45 30 58" stroke="var(--orange)" stroke-width="1.5" fill="none" opacity=".3"/>
+        <path d="M30 2 Q22 15 22 30 Q22 45 30 58" stroke="var(--orange)" stroke-width="1.5" fill="none" opacity=".3"/>
+        <line x1="2" y1="30" x2="58" y2="30" stroke="var(--orange)" stroke-width="1.5" opacity=".3"/>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Est. 2021 · Relizane, Algeria</p>
+      <h1 class="hero-title reveal">
+        <span class="title-main">CAFJT</span>
+        <span class="title-sub">Basketball Club</span>
+      </h1>
+      <p class="hero-description reveal">
+        Where champions are forged. Develop your game, build your character,
+        and compete with the best — from youth to senior level.
+      </p>
+      <div class="hero-buttons reveal">
+        <a href="register.html" class="btn btn-primary">
+          <i class="fas fa-basketball-ball"></i> Join Now
+        </a>
+        <a href="#schedule" class="btn btn-outline">
+          View Training Schedule <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-number">18+</span>
+          <span class="stat-label">Years Active</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-number">120+</span>
+          <span class="stat-label">Players</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-number">1</span>
+          <span class="stat-label">Team</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-number">15+</span>
+          <span class="stat-label">Trophies</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll cue -->
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+      <span>Scroll</span>
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Who We Are</span>
+        <h2 class="section-title">Built on Hardwood,<br>Powered by Passion</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- History -->
+        <div class="about-card reveal">
+          <div class="about-card-icon">
+            <i class="fas fa-history"></i>
+          </div>
+          <h3>Our History</h3>
+          <p>
+            Founded in 2021 by a group of passionate players and coaches, CAFJT Basketball Club
+            started from a single outdoor court in Relizane. Over two decades, we've grown into
+            one of the city's most respected basketball organizations, producing players who compete
+            at regional and national levels. Our journey is rooted in community, discipline, and
+            an unrelenting love of the game.
+          </p>
+        </div>
+
+        <!-- Mission -->
+        <div class="about-card reveal">
+          <div class="about-card-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Mission</h3>
+          <p>
+            To develop complete athletes and better human beings through basketball.
+            We provide world-class coaching, a safe and inclusive environment, and a
+            clear pathway from youth development through to elite competition — ensuring
+            every player reaches their full potential on and off the court.
+          </p>
+        </div>
+
+        <!-- Vision -->
+        <div class="about-card reveal">
+          <div class="about-card-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Vision</h3>
+          <p>
+            To become Algeria's leading basketball club — recognized for producing elite talent,
+            championing community engagement, and setting the standard for player welfare,
+            coaching excellence, and competitive achievement at every level of the game.
+          </p>
+        </div>
+
+        <!-- Values -->
+        <div class="about-card about-card-wide reveal">
+          <div class="about-card-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Our Values</h3>
+          <div class="values-grid">
+            <div class="value-item">
+              <i class="fas fa-fist-raised"></i>
+              <span>Discipline</span>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-handshake"></i>
+              <span>Respect</span>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-users"></i>
+              <span>Teamwork</span>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-trophy"></i>
+              <span>Excellence</span>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-heart"></i>
+              <span>Passion</span>
+            </div>
+            <div class="value-item">
+              <i class="fas fa-seedling"></i>
+              <span>Growth</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ TRAINING SCHEDULE ═══════════════════════════ -->
+  <section id="schedule" class="section schedule-section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Weekly Program</span>
+        <h2 class="section-title">Training Schedule</h2>
+        <p class="section-subtitle">
+          All sessions held at Salle MED KHEMISTI CAFJT, RELIZANE, Algieria.
+          Arrive 15 minutes early — doors close at session start.
+        </p>
+      </div>
+
+      <div class="schedule-table-wrapper reveal">
+        <table class="schedule-table" role="table" aria-label="Weekly training schedule">
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Category</th>
+              <th scope="col">Time</th>
+              <th scope="col">Duration</th>
+              <th scope="col">Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="schedule-row">
+              <td class="day-cell">
+                <i class="fas fa-calendar-day" aria-hidden="true"></i>
+                <strong>Monday</strong>
+              </td>
+              <td><span class="badge badge-senior">Seniors & Women</span></td>
+              <td class="time-cell"><i class="fas fa-clock" aria-hidden="true"></i> 19:00 – 21:00</td>
+              <td>2 hours</td>
+              <td><i class="fas fa-map-marker-alt" aria-hidden="true"></i> salle Bahloul-bourmadia</td>
+            </tr>
+            <tr class="schedule-row">
+              <td class="day-cell">
+                <i class="fas fa-calendar-day" aria-hidden="true"></i>
+                <strong>Wednesday</strong>
+              </td>
+              <td><span class="badge badge-junior">Juniors U18</span></td>
+              <td class="time-cell"><i class="fas fa-clock" aria-hidden="true"></i> 17:00 – 19:00</td>
+              <td>2 hours</td>
+              <td><i class="fas fa-map-marker-alt" aria-hidden="true"></i> salle khemisti</td>
+            </tr>
+            <tr class="schedule-row">
+              <td class="day-cell">
+                <i class="fas fa-calendar-day" aria-hidden="true"></i>
+                <strong>Friday</strong>
+              </td>
+              <td><span class="badge badge-all">All Teams</span></td>
+              <td class="time-cell"><i class="fas fa-clock" aria-hidden="true"></i> 18:00 – 20:00</td>
+              <td>2 hours</td>
+              <td><i class="fas fa-map-marker-alt" aria-hidden="true"></i> salle khemisti</td>
+            </tr>
+            <tr class="schedule-row">
+              <td class="day-cell">
+                <i class="fas fa-calendar-day" aria-hidden="true"></i>
+                <strong>Saturday</strong>
+              </td>
+              <td><span class="badge badge-youth">Youth & Scrimmage</span></td>
+              <td class="time-cell"><i class="fas fa-clock" aria-hidden="true"></i> 10:00 – 12:00</td>
+              <td>2 hours</td>
+              <td><i class="fas fa-map-marker-alt" aria-hidden="true"></i> salle khemisti</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Schedule note cards -->
+      <div class="schedule-notes reveal">
+        <div class="note-card">
+          <i class="fas fa-tshirt"></i>
+          <p>Bring your own kit and water bottle.</p>
+        </div>
+        <div class="note-card">
+          <i class="fas fa-id-card"></i>
+          <p>Membership card required for entry.</p>
+        </div>
+        <div class="note-card">
+          <i class="fas fa-phone-alt"></i>
+          <p>Contact us to arrange a trial session.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ TEAMS ═══════════════════════════ -->
+  <section id="teams" class="section teams-section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Our Squads</span>
+        <h2 class="section-title">The Teams</h2>
+      </div>
+
+      <div class="teams-grid">
+
+        <!-- Junior Team -->
+        <div class="team-card reveal">
+          <div class="team-card-image team-image-junior">
+            <div class="team-image-overlay"></div>
+            <div class="team-number">U18</div>
+          </div>
+          <div class="team-card-body">
+            <h3>Junior Team</h3>
+            <p>
+              Our under-18 squad is the heartbeat of the club's future. Young athletes
+              develop fundamental skills, tactical awareness, and competitive spirit under
+              the guidance of dedicated youth coaches.
+            </p>
+            <ul class="team-meta">
+              <li><i class="fas fa-users"></i> 24 Players</li>
+              <li><i class="fas fa-chalkboard-teacher"></i> Coach Mustapha T.</li>
+              <li><i class="fas fa-shield-alt"></i> Wilaya Division I</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Senior Team -->
+        <div class="team-card team-card-featured reveal">
+          <div class="team-card-badge">Flagship</div>
+          <div class="team-card-image team-image-senior">
+            <div class="team-image-overlay"></div>
+            <div class="team-number">PRO</div>
+          </div>
+          <div class="team-card-body">
+            <h3>Senior Team</h3>
+            <p>
+              The flagship squad represents CAFJT at the highest competitive level.
+              With a roster of experienced players and a tactically sharp coaching staff,
+              the seniors pursue championship glory every season.
+            </p>
+            <ul class="team-meta">
+              <li><i class="fas fa-users"></i> 15 Players</li>
+              <li><i class="fas fa-chalkboard-teacher"></i> Coach Mustapha T.</li>
+              <li><i class="fas fa-shield-alt"></i> Division I</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Women's Team -->
+        <div class="team-card reveal">
+          <div class="team-card-image team-image-women">
+            <div class="team-image-overlay"></div>
+            <div class="team-number">W</div>
+          </div>
+          <div class="team-card-body">
+            <h3>Women's Team</h3>
+            <p>
+              CAFJT's women's program is fast becoming one of the most competitive
+              in the region. Our female athletes train at the highest intensity and
+              compete with the determination that defines this club.
+            </p>
+            <ul class="team-meta">
+              <li><i class="fas fa-users"></i> 18 Players</li>
+              <li><i class="fas fa-chalkboard-teacher"></i> Coach Mokhatr G.</li>
+              <li><i class="fas fa-shield-alt"></i> Wilaya Division I</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ GALLERY ═══════════════════════════ -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-eyebrow">In Action</span>
+        <h2 class="section-title">Gallery</h2>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <!-- Gallery items - using SVG placeholders styled as basketball photos -->
+        <div class="gallery-item gallery-item-large" data-index="0" tabindex="0" role="button" aria-label="Open photo 1">
+          <div class="gallery-photo gp-1">
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+              <span>Match Night — Seniors vs Oued Rhiw</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-index="1" tabindex="0" role="button" aria-label="Open photo 2">
+          <div class="gallery-photo gp-2">
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+              <span>Junior Training</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-index="2" tabindex="0" role="button" aria-label="Open photo 3">
+          <div class="gallery-photo gp-3">
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+              <span>Women's Cup 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-index="3" tabindex="0" role="button" aria-label="Open photo 4">
+          <div class="gallery-photo gp-4">
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+              <span>Championship Final</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item gallery-item-tall" data-index="4" tabindex="0" role="button" aria-label="Open photo 5">
+          <div class="gallery-photo gp-5">
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+              <span>Slam Dunk Contest</span>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-index="5" tabindex="0" role="button" aria-label="Open photo 6">
+          <div class="gallery-photo gp-6">
+            <div class="gallery-overlay">
+              <i class="fas fa-expand"></i>
+              <span>Coaching Workshop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ LIGHTBOX ═══════════════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous photo">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next photo">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    <div class="lightbox-content">
+      <div class="lightbox-photo" id="lightboxPhoto"></div>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Get In Touch</span>
+        <h2 class="section-title">Contact Us</h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Info -->
+        <div class="contact-info reveal">
+          <h3>Club Headquarters</h3>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <strong>Address</strong>
+              <p>Salle KHEMISTI CAFJT<br>Bolvard ALN, Relizane <br>Algeria</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:+213555000123">+213 796 284 828</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:contact@cafjt-basketball.dz">contact@cafjt-basketball.dz</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <strong>Office Hours</strong>
+              <p>Mon – Sat: 09:00 – 18:00<br>Sunday: Closed</p>
+            </div>
+          </div>
+
+          <!-- Social -->
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="contact-map reveal">
+          <div class="map-placeholder">
+            <svg viewBox="0 0 600 380" fill="none" xmlns="https://maps.app.goo.gl/HNknQZTmkmUq2mdm8" class="map-svg" aria-hidden="true">
+              <!-- Grid lines -->svg
+              <rect width="600" height="380" fill="#1a1a1a" rx="12"/>
+              <line x1="0" y1="95" x2="600" y2="95" stroke="#2a2a2a" stroke-width="1"/>
+              <line x1="0" y1="190" x2="600" y2="190" stroke="#2a2a2a" stroke-width="1"/>
+              <line x1="0" y1="285" x2="600" y2="285" stroke="#2a2a2a" stroke-width="1"/>
+              <line x1="120" y1="0" x2="120" y2="380" stroke="#2a2a2a" stroke-width="1"/>
+              <line x1="240" y1="0" x2="240" y2="380" stroke="#2a2a2a" stroke-width="1"/>
+              <line x1="360" y1="0" x2="360" y2="380" stroke="#2a2a2a" stroke-width="1"/>
+              <line x1="480" y1="0" x2="480" y2="380" stroke="#2a2a2a" stroke-width="1"/>
+              <!-- Roads -->
+              <path d="M0 200 Q150 180 300 195 Q450 210 600 190" stroke="#333" stroke-width="8" fill="none"/>
+              <path d="M280 0 Q295 100 300 190 Q305 280 310 380" stroke="#333" stroke-width="8" fill="none"/>
+              <path d="M0 140 Q200 135 400 145 Q500 148 600 142" stroke="#2d2d2d" stroke-width="5" fill="none"/>
+              <path d="M180 0 L185 380" stroke="#2d2d2d" stroke-width="5" fill="none"/>
+              <!-- Park -->
+              <rect x="340" y="220" width="100" height="70" rx="4" fill="#1f3b1f" opacity="0.7"/>
+              <!-- Pin -->
+              <circle cx="300" cy="192" r="20" fill="var(--orange, #F47B20)" opacity=".9"/>
+              <circle cx="300" cy="192" r="8" fill="#fff"/>
+              <line x1="300" y1="212" x2="300" y2="230" stroke="var(--orange, #F47B20)" stroke-width="3"/>
+              <!-- Label -->
+              <rect x="220" y="240" width="160" height="36" rx="6" fill="#222" stroke="#F47B20" stroke-width="1"/>
+              <text x="300" y="262" font-family="Inter,sans-serif" font-size="12" fill="#fff" text-anchor="middle">CAFJT Basketball Club</text>
+            </svg>
+            <div class="map-overlay-text">
+              <i class="fas fa-map-pin"></i>
+              <span>Relizane, Algieria</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo">
+            <div class="logo-mark">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="24" cy="24" r="22" stroke="var(--orange)" stroke-width="2.5"/>
+                <path d="M24 2 Q30 12 30 24 Q30 36 24 46" stroke="var(--orange)" stroke-width="2" fill="none"/>
+                <path d="M24 2 Q18 12 18 24 Q18 36 24 46" stroke="var(--orange)" stroke-width="2" fill="none"/>
+                <line x1="2" y1="24" x2="46" y2="24" stroke="var(--orange)" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="logo-text">CAFJT</span>
+          </a>
+          <p>CAFJT Basketball Club — building champions since 2005 in Algiers, Algeria.</p>
+        </div>
+        <div class="footer-links-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Training</a></li>
+            <li><a href="#teams">Teams</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#contact">Directions</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Get match results and news straight to your inbox.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" aria-label="Email address" required />
+            <button type="submit" aria-label="Subscribe">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="footerYear"></span> CAFJT Basketball Club. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart" style="color:var(--orange)"></i> in Relizane</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
